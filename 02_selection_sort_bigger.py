@@ -1,3 +1,5 @@
+# Find the bigger value in an array
+
 def find_bigger(arr):
     bigger = arr[0]
     bigger_index = 0
@@ -8,11 +10,13 @@ def find_bigger(arr):
     return bigger_index
 
 
+# sort array 
 def selection_sort(arr): 
     new_arr = []
     for _ in range(len(arr)):
+        # Find tha bigger element in the array and add is to the new array 
         bigger = find_bigger(arr)
-        new_arr.append(arr.pop(bigger)) # pop удаляет по индексу
+        new_arr.append(arr.pop(bigger)) # pop(index of element)
     return new_arr
 
 arr = [5, 3, 2, 6, 7]
