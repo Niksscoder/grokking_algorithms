@@ -1,5 +1,6 @@
+# Find the smallest value in an array
 def find_smallest(arr):
-    smallest = arr[0]
+    smallest = arr[0]	
     smallest_index = 0
     for i in range(1, len(arr)):
         if arr[i] < smallest: # 3 < 5
@@ -8,9 +9,11 @@ def find_smallest(arr):
     return smallest_index
 
 
+# sort array 
 def selection_sort(arr): 
     new_arr = []
     for _ in range(len(arr)):
+    	# Find tha smallest element in the array and add is to the new array 
         smallest = find_smallest(arr)
         new_arr.append(arr.pop(smallest))
     return new_arr
